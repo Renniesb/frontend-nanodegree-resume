@@ -54,7 +54,7 @@ var projects = {
 	"projects":[{
 		"title": "portfolio project",
 		"datesWorked": "October 2014",
-		"description" : "Uses HTML, CSS and Bootstrap to create a website that showcases my work"
+		"description" : "Uses HTML, CSS and Bootstrap to create a website that showcases my work",
 		"images":["..nanodegree\portfolio1\img\drag-and-drop.jpg","..nanodegree\portfolio1\img\flashcards.jpg", "..nanodegree\portfolio1\img\science.jpg"]
 	},
 
@@ -101,7 +101,7 @@ var education = {
 
 "name":"College of Dupage",
 "location":"Dupage, Illinois",
-"degree":"Associates Degree"
+"degree":"Associates Degree",
 "majors": ["Compsi"],
 "datesAttended":"2006-2012",
 "schoolWebsite":"http://www.cod.edu/"
@@ -113,7 +113,7 @@ var education = {
 "onlineCourses":[{
 	"title":"Intro to HTML and CSS",
 	"school":"Udacity",
-	"dates":"October 2014"
+	"dates":"October 2014",
 	 "url":"https://www.udacity.com/course/ud304"
 
 },
@@ -121,7 +121,7 @@ var education = {
 {
 	"title":"How to use Git and Github",
 	"school":"Udacity",
-	"dates":"November 2014"
+	"dates":"November 2014",
 	 "url":"https://www.udacity.com/course/ud775"
 
 }
