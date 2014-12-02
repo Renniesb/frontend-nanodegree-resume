@@ -3,18 +3,21 @@ var work = {
 	"jobs": [{"employer" : "Ministry of education",
 			  "title" : "Assistent teacher",
 			  "datesWorked" : "October 2014 - July 2015",
-			  "location" : "Madrid Spain","description":"Prepared students for examinations with conversation and exercises"},
+			  "location" : "Madrid Spain",
+			  "description":"Prepared students for examinations with conversation and exercises"},
 
 			  {"employer" : "Ministry of education",
 			  "title" : "Assistent teacher",
 			  "datesWorked" : "September 15 2013 - June 24th 2014",
-			  "location" : "Segovia Spain","description":"Aided with exercises and practiced english with students"},
+			  "location" : "Segovia Spain",
+			  "description":"Aided with exercises and practiced english with students"},
 
 			  {
 			  "employer" : "Baylor University",
 			  "title" : "Library Assistent",
 			  "datesWorked" : "September 2007-June 2009",
-			  "location" : "Waco Texas","description":"Found and returned loaned books, packaged loaned books"}
+			  "location" : "Waco Texas",
+			  "description":"Found and returned loaned books, packaged loaned books"}
 			  ]
 
 };
@@ -51,6 +54,20 @@ var bio = {
 	"contacts": {"mobileNumber":"684128822","Email": "rsbevineau@gmail.com", "githubUsername":"renniesb","location":"Madrid"},
 	"pictureUrl":"images/fry.jpg",	
 	"skills": ["HTML","CSS", "Javascript"]
+};
+
+if(bio.skills.length > 0) {
+
+	$("#header").append(HTMLskillsStart);
+
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+	$("#skills").append(formattedSkill);
+
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+	$("#skills").append(formattedSkill);
+
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+	$("#skills").append(formattedSkill);
 };
 
 var education = {
@@ -102,19 +119,7 @@ var education = {
 
 
 
-if(bio.skills.length > 0) {
 
-	$("#header").append(HTMLskillsStart);
-
-	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-	$("#skills").append(formattedSkill);
-
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-	$("#skills").append(formattedSkill);
-
-	formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-	$("#skills").append(formattedSkill);
-}
 
 
 
@@ -152,6 +157,7 @@ projects.display = function(){
 
 		formattedProjectDates= HTMLprojectDates.replace("%data%",projects.projects[project].datesWorked);
 			$(".project-entry:last").append(formattedProjectDates);
+		
 		formattedProjectDescription= HTMLprojectDescription.replace("%data%",projects.projects[project].description);
 			$(".project-entry:last").append(formattedProjectDescription);
 
@@ -199,7 +205,7 @@ work.display = function(){
 
 }
 
-}
+};
 
 work.display();
 
