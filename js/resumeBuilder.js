@@ -254,7 +254,7 @@ $("#main").append(internationalizeButton)
 
 
 
-projects.display();
+
 
 
 
@@ -262,5 +262,6 @@ projects.display();
 
 bio.display();
 work.display();
+projects.display();
 
 $("#mapDiv").append(googleMap);
