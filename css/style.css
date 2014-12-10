@@ -23,9 +23,10 @@ h1 {
 h2 {
   font-style: bold;
   font-size: 24px;
-  color: #999999;
+  color: #8B5742;
   line-height: 29px;
   padding: 10px;
+  background-color:#FDF5E6;
 }
 
 h3 {
@@ -108,6 +109,10 @@ a {
   color: #FFFFFF;
 }
 
+.grey-text{
+
+  color: #999999;
+}
 .gray {
   background-color: #F3F3F3;
   padding-bottom: 10px;
@@ -120,8 +125,10 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-image: url('../images/resumePic.png');
 }
+
+
 
 .flex-box {
   display: -webkit-flex;
