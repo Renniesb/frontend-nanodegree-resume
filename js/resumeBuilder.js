@@ -185,25 +185,26 @@ var education = {
 
 {
 
-"name": "Baylor",
-"location":"Dupage",
-"degree":"Bachelor of Science",
-"majors": ["Science", "Spanish"],
-"datesAttended": "2008-2009",
-"schoolWebsite": "http://www.baylor.edu/"
+"name":"College of Dupage",
+"degree":"Associates Degree",
+"location":"Dupage, Illinois",
+"majors": ["Compsi"],
+"datesAttended":"2006-2012"
+
 },
 
 
 {
 
-"name":"College of Dupage",
-"location":"Dupage, Illinois",
-"degree":"Associates Degree",
-"majors": ["Compsi"],
-"datesAttended":"2006-2012",
-"schoolWebsite":"http://www.cod.edu/"
-
+"name": "Baylor",
+"location":"Dupage",
+"degree":"Bachelors of Science",
+"majors": ["Science"],
+"datesAttended": "2008-2009"
 }
+
+
+
 
 ],
 
@@ -225,6 +226,73 @@ var education = {
 
 ]
 };
+
+education.display = function(){
+
+	$("#education").append(HTMLschoolStart);
+
+	for(school in education.schools){
+
+		
+
+		formattedSchoolName= HTMLschoolName.replace("%data%",education.schools[school].name);
+			$(".education-entry:last").append(formattedSchoolName);
+		
+
+		formattedSchoolDegree= HTMLschoolDegree.replace("%data%",education.schools[school].degree);
+			$(".education-entry:last").append(formattedSchoolDegree);
+
+		
+		
+		formattedDates= HTMLschoolDates.replace("%data%",education.schools[school].datesAttended);
+			$(".education-entry:last").append(formattedDates);
+
+		
+
+		formattedSchoolLocation= HTMLschoolLocation.replace("%data%",education.schools[school].location);
+			$(".education-entry:last").append(formattedSchoolLocation);
+
+		if(education.schools[school].majors.length>0){
+
+				for (major in education.schools[school].majors){
+
+					formattedSchoolMajor= HTMLschoolMajor.replace("%data%",education.schools[school].majors[major]);
+					
+					$(".education-entry:last").append(formattedSchoolMajor);
+				}
+
+		}
+
+	
+	
+		}
+
+$(".education-entry:last").append(HTMLonlineClasses);
+
+	for(course in education.onlineCourses){
+
+
+		formattedOnlineTitle= HTMLonlineTitle.replace("%data%",education.onlineCourses[course].title);
+					$(".education-entry:last").append(formattedOnlineTitle);
+
+		formattedOnlineSchool= HTMLonlineSchool.replace("%data%",education.onlineCourses[course].school);
+					$(".education-entry:last").append(formattedOnlineSchool);
+
+		formattedOnlineDates= HTMLonlineDates.replace("%data%",education.onlineCourses[course].dates);
+					$(".education-entry:last").append(formattedOnlineDates);
+
+		formattedOnlineUrl= HTMLonlineURL.replace("%data%",education.onlineCourses[course].url);
+					$(".education-entry:last").append(formattedOnlineUrl);
+
+
+
+
+
+	}	
+
+
+}
+
 
 
 
@@ -263,5 +331,6 @@ $("#main").append(internationalizeButton)
 bio.display();
 work.display();
 projects.display();
+education.display();
 
 $("#mapDiv").append(googleMap);
