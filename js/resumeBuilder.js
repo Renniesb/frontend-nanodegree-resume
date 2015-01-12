@@ -116,7 +116,7 @@ var projects = {
 		"title": "Portfolio Project",
 		"datesWorked": "October 2014",
 		"description" : "Uses HTML, CSS and Bootstrap to create a website that showcases my work",
-		"images":["images/frontEndDeveloper.jpg"]
+		"images":["images/developer.jpg"]
 	},
 	{
 		"title": "Science Blog",
